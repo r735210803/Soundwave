@@ -1,0 +1,37 @@
+import java.io.*;
+import java.util.*;
+class Simple
+{
+public static void main(String args[])
+{
+	Float principleAmount=new Float(0);
+	Float rateOfIntrest=new Float(0);
+	int numberOfYears=0;
+	try
+	{
+		 DataInputStream in=new DataInputStream(System.in);
+		 String tempString;
+		 System.out.println("Please Enter the Principl Amount");
+		 System.out.flush();
+		 
+		 tempString=in.readLine();
+		 principleAmount=Float.valueOf(tempString);
+		 System.out.println("Enter the rate of Interest");
+		 System.out.flush();
+		 tempString=in.readLine();
+		 rateOfIntrest=Float.valueOf(tempString);
+		 
+		 System.out.println("Enter the Number of Years");
+		 System.out.flush();
+		 tempString=in.readLine();
+		 numberOfYears=Integer.parseInt(tempString);
+		 
+		 float intrestTotal=principleAmount*numberOfYears*rateOfIntrest;
+		 System.out.println("The Total amout of Intrest is="+intrestTotal);
+	}
+	catch(Exception ex)
+	{}
+	
+		 
+}	
+	}
