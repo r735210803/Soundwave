@@ -1,0 +1,74 @@
+import java.io.*;
+import java.util.*;
+class Simple
+{
+public static void main(String args[])
+{
+DataInputStream in=new DataInputStream(System.in);
+{
+  Integer Hindi=new Integer(0);
+  Integer Math=new Integer(0);
+  Integer Science=new Integer(0);
+  Integer English=new Integer(0);
+  Integer Sanskrit=new Integer(0);
+  int n;
+  float parcentage=0;
+  int Totalmarks=0;
+  String tempInteger;
+  try{
+	  
+ System.out.println("Enter Your Total number of Subject ");
+  System.out.flush();
+  tempInteger=in.readLine();
+  n=Integer.parseInt(tempInteger);
+  System.out.println("Enter Your Hindi Marks:");
+ 
+  System.out.flush();
+  tempInteger=in.readLine();
+  Hindi=Integer.parseInt(tempInteger);
+  
+  System.out.println("Enter Your English Marks:");
+  
+  System.out.flush();
+  tempInteger=in.readLine();
+  English=Integer.parseInt(tempInteger); 
+  
+  System.out.println("Enter Your Math Marks:");
+  
+  System.out.flush();
+  tempInteger=in.readLine();
+  Math=Integer.parseInt(tempInteger);
+  
+    System.out.println("Enter Your Science Marks:");
+  
+  System.out.flush();
+  tempInteger=in.readLine();
+  Science=Integer.parseInt(tempInteger);
+  
+    System.out.println("Enter Your Sanskrit Marks:");
+  
+  System.out.flush();
+  tempInteger=in.readLine();
+  Sanskrit=Integer.parseInt(tempInteger);
+   Totalmarks=Math+Hindi+Sanskrit+English+Science;
+   parcentage=(Math+Hindi+Sanskrit+English+Science)/n;
+ 
+  if(Hindi<35||Math<35||Science<35||Sanskrit<35||English<35)
+  {
+	   System.out.println("You Result is Fail");
+	      System.out.println("Your Total Marks is ="+Totalmarks);
+       System.out.println("Your Parcentage is="+parcentage+"%");
+  }
+  else 
+  {
+	   
+   System.out.println("Your Total Marks is ="+Totalmarks);
+   System.out.println("Your Parcentage is="+parcentage+"%");
+  }
+   }
+catch(Exception ex)
+{}   
+	}
+}
+}
+ 
